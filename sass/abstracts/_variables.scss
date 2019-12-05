@@ -1,0 +1,56 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-light: #f7f7f7;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-forthy-light: #bb8f8f;
+$color-forthy-dark: #fc0000;
+
+$background1: linear-gradient(
+  to right bottom,
+  $color-secondary-light,
+  $color-secondary-dark
+);
+
+$background2: linear-gradient(
+  to right bottom,
+  $color-tertiary-light,
+  $color-tertiary-dark
+);
+
+$background3: linear-gradient(
+  to right bottom,
+  $color-forthy-light,
+  $color-forthy-dark
+);
+
+$background_text1: linear-gradient(
+  to right bottom,
+  rgba($color-secondary-light, .85),
+  rgba($color-secondary-dark, .85)
+);
+
+$background_text2: linear-gradient(
+  to right bottom,
+  rgba($color-tertiary-light, .85),
+  rgba($color-tertiary-dark, .85)
+);
+
+$background_text3: linear-gradient(
+  to right bottom,
+  rgba($color-forthy-light, .85),
+  rgba($color-forthy-dark, .85)  
+);
+
+//GRID
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

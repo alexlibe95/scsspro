@@ -1,0 +1,147 @@
+.card {
+  //FUNCTIONALITY
+
+  perspective: 70rem;
+  -moz-perspective: 70rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    color: #fff;
+    font-size: 3rem;
+    height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &--front {
+      background-color: #fff;
+      color: black;
+    }
+
+    &--back {
+      background-color: rgb(65, 255, 122);
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: $background1;
+      }
+
+      &-2 {
+        background-image: $background2;
+      }
+
+      &-3 {
+        background-image: $background3;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  //FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    &--1 {
+      background-image: $background1, url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: $background2, url(../img/nat-7.jpg);
+    }
+
+    &--3 {
+      background-image: $background3, url(../img/nat-6.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    width: 60%;
+  }
+
+  &__heading-span {
+    padding: .65rem 1.2rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: $background_text1;
+    }
+    &--2 {
+      background-image: $background_text2;
+    }
+    &--3 {
+      background-image: $background_text3;
+    }
+  }
+
+  &__details {
+    padding: .1rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  //BACK SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    margin-bottom: 8rem;
+    color: #fff;
+  }
+
+  &__price-only {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
