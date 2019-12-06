@@ -150,6 +150,9 @@ body {
 .u-margin-top-big {
   margin-top: 12rem; }
 
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -356,7 +359,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 5rem;
@@ -379,7 +382,8 @@ body {
     backface-visibility: hidden;
     height: 100%; }
   .story__text {
-    transform: skewX(12deg); }
+    transform: skewX(12deg);
+    margin-bottom: 30px; }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -390,7 +394,7 @@ body {
     font-size: 1.7rem;
     text-align: center;
     opacity: 0;
-    transition: 1s;
+    transition: .5s;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     opacity: 1;
@@ -398,6 +402,40 @@ body {
   .story:hover .story__img {
     transform: translateX(-3.7rem) scale(1);
     filter: blur(1.5px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.25;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 55%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
 
 .header {
   height: 95vh;
@@ -483,15 +521,23 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
-  margin-top: -10vh; }
-
-.section-tours {
-  background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
 
 .section-stories {
-  margin-top: -14rem;
-  background-color: #f7f7f7;
+  position: relative;
   padding: 15rem 0; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: 100%;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6); }
+  .book__form {
+    width: 60%;
+    padding: 6rem; }
