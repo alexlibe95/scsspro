@@ -5,3 +5,10 @@
         clear: both;
     }
 }
+
+@mixin absCenter {
+    position: absolute;
+    top: 16%;
+    left: 12%;
+    transform: translate ( -50%, -50%)
+}
